@@ -26,7 +26,13 @@ jobs:
         run: mvn clean test
 
       - name: Install Allure
-        run: sudo apt-add-repository ppa:qameta/allure -y && sudo apt-get update && sudo apt-get install allure -y
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y unzip curl
+          curl -sSL https://github.com/allure-framework/allure2/releases/download/2.30.0/allure-2.30.0.zip -o allure.zip
+          unzip allure.zip -d $HOME/allure
+          export PATH=$HOME/allure/allure-2.30.0/bin:$PATH
+          allure --version
 
       - name: Generate Allure Report
         run: |

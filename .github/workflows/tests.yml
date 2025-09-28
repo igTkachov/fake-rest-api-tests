@@ -50,3 +50,7 @@ jobs:
           publish_dir: target/site/allure-maven-plugin
           publish_branch: gh-pages
           force_orphan: true
+
+      - name: Print Allure Report URL
+        run: |
+          echo "Allure report is available at: https://igtkachov.github.io/fake-rest-api-tests/"

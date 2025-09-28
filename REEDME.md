@@ -7,6 +7,12 @@ Test for FakeRestApi using Java, JUnit 5, RestAssured and Allure reports.
 - Java 17+
 - Maven 3+
 
+## Clone repository
+
+```bash
+git clone https://github.com/igTkachov/fake-rest-api-tests.git
+cd fake-rest-api-tests
+```
 ## Execute tests
 
 ```bash
